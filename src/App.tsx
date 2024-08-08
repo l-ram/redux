@@ -2,6 +2,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Counter from "../src/features/counter/Counter";
 import "./App.css";
+import { PostsList } from "./features/post/postsList";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <PostsList />
+      <AddPostForm />
     </>
   );
 }

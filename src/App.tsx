@@ -2,7 +2,8 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Counter from "../src/features/counter/Counter";
 import "./App.css";
-import { PostsList } from "./features/post/postsList";
+import PostsList from "./features/post/PostsList";
+import AddPostForm from "./features/post/addPostForm";
 
 function App() {
   return (

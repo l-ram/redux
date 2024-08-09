@@ -1,17 +1,15 @@
 import { useSelector } from "react-redux";
-import { selectAllPosts } from "./postSlice";
+import { RootState } from "../../store";
 
-export const PostsList = () => {
-  const posts = useSelector(selectAllPosts);
+const PostsList = () => {
+  const posts = useSelector((state: RootState) => state.posts);
 
-  const renderedPosts = posts.map((post) => {
-    return (
-      <article key={post.id}>
-        <h3>{post.title}</h3>
-        <p>{post.content.substring(0, 100)}</p>
-      </article>
-    );
-  });
+  const renderedPosts = posts.map((post) => (
+    <article key={post.id}>
+      <h3>{post.title}</h3>
+      <p>{post.content.substring(0, 100)}</p>
+    </article>
+  ));
 
   return (
     <section>
@@ -20,3 +18,4 @@ export const PostsList = () => {
     </section>
   );
 };
+export default PostsList;
